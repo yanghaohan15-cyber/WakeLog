@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+    background: #090c12;
+    overflow: hidden;
+  }
+}
+
+.night-stage {
+  position: fixed;
+  inset: 0;
+  touch-action: none;
+  background:
+    radial-gradient(ellipse 80% 62% at 50% 12%, #2a3d66 0%, #151b2c 42%, #090c12 100%);
+}
+
+.night-stage canvas {
+  display: block;
+  touch-action: none;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.glyph-preload {
+  position: absolute;
+  left: -4000px;
+  top: 0;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  white-space: nowrap;
+}
